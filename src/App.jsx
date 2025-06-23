@@ -14,9 +14,12 @@ function App() {
     setResult("");
 
     try {
-      const res = await axios.post("http://localhost:5000/api/suggest", {
-        prompt,
-      });
+      const res = await axios.post(
+        "http://host.docker.internal:5000/api/suggest",
+        {
+          prompt,
+        }
+      );
       setResult(res.data.result);
     } catch (err) {
       console.error("Error:", err.message);
@@ -33,12 +36,15 @@ function App() {
       {/* Prompt Input */}
       <div className="row justify-content-center mb-3">
         <div className="col-md-12">
-          <input
-            className="form-control shadow-lg"
-            placeholder="Enter a movie or description..."
-            value={prompt}
-            onChange={(e) => setPrompt(e.target.value)}
-          />
+         
+            <input
+              className="form-control shadow-lg"
+              placeholder="Enter a movie or description..."
+              value={prompt}
+              onChange={(e) => setPrompt(e.target.value)}
+             
+            />
+         
         </div>
       </div>
 
