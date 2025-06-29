@@ -16,3 +16,8 @@ npm run dev
 ## Live App: 
 Netlify Link
 https://ai-movie-genius.netlify.app/
+
+## 👨‍💻 Author
+Name: Vidhyasagar Myana
+
+GitHub: https://github.com/1Vidhyasagar
